@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 col-sm-12 col-xl-6 col-md-12 container-txt">
+      <h2 class="title-page">Conduce el auto de tus sueños.</h2>
+      <p class="txt-desc-page">Tenemos para ti un plan de arrendamiento de auto seminuevo a precio preferencial y con el
+        maximo
+        beneficio fiscal que la ley permite</p>
+    </div>
+    <div class="col-6 col-sm-12 col-xl-6 col-md-12">
+      <div class="card crd-form">
+        <div class="card-body">
+          <h2 class="title-form">Solicita una cotización</h2>
+          <form [formGroup]="cotizacionForm">
+            <label for="exampleInputEmail1">Distribuidor</label>
+            <select class="form-select form-select-lg mb-3 m-bottom" aria-label=".form-select-lg example"
+              formControlName="distributor">
+              <option *ngFor="let dist of distribuidores" [value]="dist.id">{{dist.name}}</option>
+            </select>
+            <span *ngIf="distributor?.invalid && (distributor?.dirty || distributor?.touched)"
+              class="err">*Requerido</span>
+            <div class="form-group m-bottom">
+              <label for="exampleInputEmail1">Pagina del auto</label>
+              <input type="text" class="form-control" placeholder="Ingres el stock ID o URL de la pagina del auto"
+                formControlName="page">
+              <span *ngIf="page?.invalid && (page?.dirty || page?.touched)" class="err">*Requerido</span>
+            </div>
+            <div class="form-group m-bottom">
+              <label for="exampleInputEmail1">Tu nombre completo</label>
+              <input type="text" class="form-control" placeholder="Nombre completo" formControlName="name">
+              <span *ngIf="name?.invalid && (name?.dirty || name?.touched)" class="err">*Requerido</span>
+            </div>
+            <div class="form-group m-bottom">
+              <label for="exampleInputEmail1">Tu correo electronico</label>
+              <input type="email" class="form-control" placeholder="Email" formControlName="email">
+              <span *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="err">*Requerido</span>
+              <br>
+              <span *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="err">*Utiliza un formato:
+                correo@corre.com</span>
+            </div>
+          </form>
+          <div class="container m-top">
+            <div class="row">
+              <div class="col-2">
+                <div class="container-img">
+                  <img src="../../../assets/logos/info.svg" alt="">
+                </div>
+              </div>
+              <div class="col-10">
+                <div class="txt-info">
+                  <p class="txt-info-desc">Uno de nuestros ejecutivos preparara tu cotizacion y te la hara llegar a tu
+                    correo electronico</p>
+                </div>
+              </div>
+            </div>
+            <div class="container-btn">
+              <div class="row">
+                <div class="col-12">
+                  <button class="btn btn-primary btn-b" (click)="sendData()">SOLICITAR COTIZACIÓN</button>
+                  <div class="alerta" *ngIf="alert === true">
+                    <p>Verifica tu información</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

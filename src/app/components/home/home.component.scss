@@ -1,0 +1,80 @@
+@import "../../utils/global-styles.scss";
+
+.container-app {
+  height: 900px;
+  background: rgb(172, 104, 255);
+  background: linear-gradient(360deg, rgba(172, 104, 255, 1) 20%, rgba(80, 88, 252, 1) 30%, rgb(255, 255, 255) 65%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-right: 300px;
+}
+
+.container-form {
+  position: absolute;
+  margin-top: 60px;
+}
+
+.container-info {
+  background: rgb(172, 104, 255);
+  background: linear-gradient(180deg, rgba(172, 104, 255, 1) 0%, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 1) 100%);
+}
+
+.container-info-cards {
+  background: $colorGris;
+  padding: 15px;
+}
+
+.container-footer {
+  padding: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container-app {
+    height: 1600px;
+  }
+
+  .container-img {
+    position: static;
+    margin-right: 0;
+    margin-top: 300px;
+  }
+
+  .img-auto {
+    width: 800px;
+    height: 400px;
+  }
+
+  .container-form {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .container-app {
+    height: 1600px;
+  }
+
+  .container-img {
+    position: static;
+    margin-right: 0;
+    margin-top: 400px;
+  }
+
+  .img-auto {
+    width: 600px;
+    height: 300px;
+  }
+
+  .container-form {
+    position: static;
+  }
+}

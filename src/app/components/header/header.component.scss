@@ -1,0 +1,49 @@
+@import "../../utils/global-styles.scss";
+
+.nav-color {
+  background: $colorBlanco !important;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container-img {
+  width: 70%;
+}
+
+.s-options {
+  border: none !important;
+}
+
+.m-top {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.s-style {
+  width: 100%;
+  margin-right: 25px;
+  color: $colorNegro;
+  border: none !important;
+  background-color: $colorBlanco !important;
+  margin-bottom: 10px;
+  font-family: "Montserrat-Regular", Arial, Helvetica, sans-serif;
+}
+
+.btn-w {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border: none !important;
+  font-family: "Montserrat-Regular", Arial, Helvetica, sans-serif;
+}
+
+.btn-b {
+  border: none !important;
+  margin-bottom: 10px;
+}
